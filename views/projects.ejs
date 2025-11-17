@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Carlos Espinosa Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">Carlos Espinosa</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="hover:text-blue-600 transition">Home</a>
+                    <a href="/about" class="hover:text-blue-600 transition">About</a>
+                    <a href="/projects" class="hover:text-blue-600 transition">Projects</a>
+                    <a href="/skills" class="hover:text-blue-600 transition">Skills</a>
+                    <a href="/contact" class="hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-blue-600" id="menu-toggle">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-5xl font-bold">Projects</h1>
+                <p class="text-blue-100 mt-2">A showcase of my database and backend development work</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-wrap gap-2">
+                <button class="filter-btn bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold" data-filter="all">All Projects</button>
+                <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition" data-filter="Database Design">Database Design</button>
+                <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition" data-filter="Database Administration">Database Administration</button>
+                <button class="filter-btn bg-gray-300 text-gray-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition" data-filter="Analytics">Analytics</button>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <% projects.forEach(project => { %>
+                    <div class="project-card bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105 overflow-hidden" data-category="<%= project.category %>">
+                        <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7m0 0c0 2.21-3.582 4-8 4s-8-1.79-8-4m0 0V5c0 2.21 3.582 4 8 4s8-1.79 8-4v2m0 10c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                </svg>
+                                <p class="font-semibold"><%= project.title %></p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2"><%= project.title %></h3>
+                            <p class="text-gray-600 mb-4"><%= project.description %></p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <% project.tools.forEach(tool => { %>
+                                    <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full"><%= tool %></span>
+                                <% }); %>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded"><%= project.category %></span>
+                                <a href="<%= project.link %>" target="_blank" class="text-blue-600 font-bold hover:text-blue-800 transition flex items-center">
+                                    View on GitHub
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m4-6h-8m0 0l4-4m-4 4l-4-4"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">Interested in My Work?</h2>
+                <p class="text-lg mb-8 text-blue-100">Let's discuss how I can contribute to your team or project</p>
+                <a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition inline-block">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Carlos Espinosa</h3>
+                    <p class="text-gray-400">Database Programming & Administration Student</p>
+                    <p class="text-gray-400 text-sm mt-2">Bergen Community College</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white transition">About</a></li>
+                        <li><a href="/projects" class="hover:text-white transition">Projects</a></li>
+                        <li><a href="/skills" class="hover:text-white transition">Skills</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.linkedin.com/in/carlos-espinosa-871339286/" target="_blank" class="hover:text-white transition">LinkedIn</a></li>
+                        <li><a href="https://github.com/carlosespinosa" target="_blank" class="hover:text-white transition">GitHub</a></li>
+                        <li><a href="mailto:carlos@example.com" class="hover:text-white transition">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700">
+            <div class="text-center text-gray-400 text-sm mt-8">
+                <p>&copy; 2025 Carlos Espinosa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-blue-600', 'text-white');
+                    b.classList.add('bg-gray-300', 'text-gray-800');
+                });
+                this.classList.add('bg-blue-600', 'text-white');
+                this.classList.remove('bg-gray-300', 'text-gray-800');
+                
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Carlos Espinosa Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">Carlos Espinosa</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="hover:text-blue-600 transition">Home</a>
+                    <a href="/about" class="hover:text-blue-600 transition">About</a>
+                    <a href="/projects" class="hover:text-blue-600 transition">Projects</a>
+                    <a href="/skills" class="hover:text-blue-600 transition">Skills</a>
+                    <a href="/contact" class="hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-blue-600" id="menu-toggle">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-5xl font-bold">Technical Skills</h1>
+                <p class="text-blue-100 mt-2">A comprehensive overview of my technical expertise</p>
+            </div>
+        </section>
+
+        <!-- Skills Content -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Database Skills -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-900">Database Technologies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">SQL Databases</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>PostgreSQL</strong> - Advanced queries, indexing, optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>MySQL</strong> - Database design, user management, backup & recovery</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Oracle SQL</strong> - Complex PL/SQL, performance tuning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>SQL Server</strong> - T-SQL, stored procedures, SSRS</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>SQLite</strong> - Lightweight database solutions</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Core Competencies</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Database Design</strong> - ER modeling, normalization, schema design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Query Optimization</strong> - Execution plans, indexing strategies</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Database Administration</strong> - User management, backups, security</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Data Integrity</strong> - Constraints, triggers, stored procedures</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Performance Tuning</strong> - Query analysis, index optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend & Programming -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-900">Backend Development</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Languages & Frameworks</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Node.js</strong> - Express.js, REST APIs, middleware</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>JavaScript</strong> - ES6+, async/await, promises</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Python</strong> - Data processing, scripting, analysis</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Tools & Technologies</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Git & GitHub</strong> - Version control, collaboration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>REST APIs</strong> - Design and implementation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                                <span><strong>Data Analysis</strong> - Aggregation, reporting</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-900">Frontend Technologies</h2>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-blue-600 mb-3">HTML & CSS</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>✓ Semantic HTML5</li>
+                                <li>✓ Responsive Design</li>
+                                <li>✓ CSS Flexbox & Grid</li>
+                                <li>✓ Tailwind CSS</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-blue-600 mb-3">JavaScript</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>✓ DOM Manipulation</li>
+                                <li>✓ Event Handling</li>
+                                <li>✓ AJAX & Fetch API</li>
+                                <li>✓ ES6+ Features</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-blue-600 mb-3">Frameworks</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>✓ React.js</li>
+                                <li>✓ EJS Templating</li>
+                                <li>✓ Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8 text-gray-900">Professional Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
+                        <h4 class="text-lg font-bold text-blue-600 mb-2">Problem-Solving</h4>
+                        <p class="text-gray-600 text-sm">Analytical thinking and logical approach to complex challenges</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
+                        <h4 class="text-lg font-bold text-blue-600 mb-2">Communication</h4>
+                        <p class="text-gray-600 text-sm">Clear documentation and ability to explain technical concepts</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
+                        <h4 class="text-lg font-bold text-blue-600 mb-2">Attention to Detail</h4>
+                        <p class="text-gray-600 text-sm">Precision in code quality and database operations</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
+                        <h4 class="text-lg font-bold text-blue-600 mb-2">Continuous Learning</h4>
+                        <p class="text-gray-600 text-sm">Commitment to staying current with emerging technologies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Carlos Espinosa</h3>
+                    <p class="text-gray-400">Database Programming & Administration Student</p>
+                    <p class="text-gray-400 text-sm mt-2">Bergen Community College</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/about" class="hover:text-white transition">About</a></li>
+                        <li><a href="/projects" class="hover:text-white transition">Projects</a></li>
+                        <li><a href="/skills" class="hover:text-white transition">Skills</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.linkedin.com/in/carlos-espinosa-871339286/" target="_blank" class="hover:text-white transition">LinkedIn</a></li>
+                        <li><a href="https://github.com/carlosespinosa" target="_blank" class="hover:text-white transition">GitHub</a></li>
+                        <li><a href="mailto:carlos@example.com" class="hover:text-white transition">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700">
+            <div class="text-center text-gray-400 text-sm mt-8">
+                <p>&copy; 2025 Carlos Espinosa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Customer Database Management System",
+    "description": "A comprehensive SQL-based customer management system built with PostgreSQL and Node.js. Implements CRUD operations, data validation, and advanced queries for customer analytics.",
+    "tools": ["PostgreSQL", "Node.js", "SQL", "Express.js"],
+    "image": "/images/project-1.png",
+    "link": "https://github.com/carlosespinosa",
+    "category": "Database Design"
+  },
+  {
+    "id": 2,
+    "title": "Inventory Optimization with SQL",
+    "description": "Developed an inventory tracking system with complex SQL queries for real-time stock monitoring, automated reordering, and supply chain optimization.",
+    "tools": ["MySQL", "SQL", "Python", "Data Analysis"],
+    "image": "/images/project-2.png",
+    "link": "https://github.com/carlosespinosa",
+    "category": "Database Administration"
+  },
+  {
+    "id": 3,
+    "title": "Sales Analytics Dashboard",
+    "description": "Built an interactive dashboard using SQL stored procedures to aggregate sales data, generate performance reports, and visualize trends.",
+    "tools": ["Oracle SQL", "PL/SQL", "Data Visualization", "SQL Server"],
+    "image": "/images/project-3.png",
+    "link": "https://github.com/carlosespinosa",
+    "category": "Analytics"
+  },
+  {
+    "id": 4,
+    "title": "Database Migration & Optimization",
+    "description": "Executed migration of legacy MySQL database to PostgreSQL with performance optimization, indexing strategies, and query tuning.",
+    "tools": ["PostgreSQL", "MySQL", "SQL Optimization", "Database Administration"],
+    "image": "/images/project-4.png",
+    "link": "https://github.com/carlosespinosa",
+    "category": "Database Administration"
+  }
+]
